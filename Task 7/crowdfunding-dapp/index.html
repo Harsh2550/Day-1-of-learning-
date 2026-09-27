@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Testnet Crowdfunding DApp"
+  />
+
+  <title>Testnet Crowdfunding DApp</title>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header class="navbar">
+
+    <div class="brand-section">
+
+      <h1>Crowdfunding DApp</h1>
+
+      <div class="badge-row">
+        <span class="network-badge">
+          TESTNET
+        </span>
+
+        <span
+          id="walletStatus"
+          class="wallet-status disconnected"
+        >
+          Wallet Not Connected
+        </span>
+      </div>
+
+    </div>
+
+    <button
+      id="connectWallet"
+      class="wallet-button"
+      type="button"
+    >
+      Connect Wallet
+    </button>
+
+  </header>
+
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+
+  <main class="container">
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+      <p class="eyebrow">
+        BLOCKCHAIN CROWDFUNDING
+      </p>
+
+      <h2>
+        Build the Future Together
+      </h2>
+
+      <p class="hero-description">
+        Support a community-driven project through
+        a transparent blockchain-based crowdfunding campaign.
+      </p>
+
+    </section>
+
+
+    <!-- Campaign Card -->
+
+    <section class="campaign-card">
+
+      <div class="campaign-top">
+
+        <div>
+
+          <p class="campaign-label">
+            ACTIVE CAMPAIGN
+          </p>
+
+          <h3 id="campaignTitle">
+            Build a Decentralized Community Platform
+          </h3>
+
+        </div>
+
+        <div class="campaign-status">
+          ACTIVE
+        </div>
+
+      </div>
+
+
+      <p class="description">
+        Help us create a community platform powered by
+        Web3 technology and transparent crowdfunding.
+      </p>
+
+
+      <!-- Funding Information -->
+
+      <div class="funding-grid">
+
+        <div class="funding-item">
+
+          <span>
+            Funding Goal
+          </span>
+
+          <strong id="goal">
+            ₹1,00,000
+          </strong>
+
+        </div>
+
+
+        <div class="funding-item">
+
+          <span>
+            Amount Raised
+          </span>
+
+          <strong id="raised">
+            ₹45,000
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- Progress -->
+
+      <div class="progress-section">
+
+        <div class="progress-header">
+
+          <span>
+            Campaign Progress
+          </span>
+
+          <strong id="progressText">
+            45%
+          </strong>
+
+        </div>
+
+
+        <div class="progress-bar">
+
+          <div
+            id="progress"
+            class="progress"
+          ></div>
+
+        </div>
+
+
+        <p id="progressDescription">
+          ₹45,000 of ₹1,00,000 raised
+        </p>
+
+      </div>
+
+
+      <!-- Wallet Address -->
+
+      <div
+        id="walletInfo"
+        class="wallet-info hidden"
+      >
+        Connected Wallet:
+
+        <span id="walletAddress">
+          0x0000...0000
+        </span>
+      </div>
+
+
+      <!-- Buttons -->
+
+      <div class="action-area">
+
+        <button
+          id="contributeButton"
+          class="contribute-button"
+          type="button"
+        >
+          Contribute
+        </button>
+
+      </div>
+
+
+      <!-- Status Message -->
+
+      <div
+        id="messageBox"
+        class="message-box hidden"
+      ></div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <p>
+      Testnet Crowdfunding DApp
+    </p>
+
+    <span>
+      Frontend ready for future blockchain integration
+    </span>
+
+  </footer>
+
+
+  <!-- =========================
+       JavaScript
+  ========================== -->
+
+  <script
+    type="module"
+    src="/src/main.js"
+  ></script>
+
+</body>
+
+</html>

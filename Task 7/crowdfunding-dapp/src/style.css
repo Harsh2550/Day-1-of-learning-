@@ -1,0 +1,561 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #f5f7fb;
+  color: #111827;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 22px 7%;
+
+  background: #0f172a;
+  color: white;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+
+.brand-section h1 {
+  margin: 0 0 8px;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+.badge-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+
+.network-badge {
+  display: inline-flex;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  background: #1e293b;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.wallet-status {
+  display: inline-flex;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+.wallet-status.disconnected {
+  background: #3f3f46;
+}
+
+
+.wallet-status.connected {
+  background: #14532d;
+  color: #dcfce7;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  border: none;
+  cursor: pointer;
+
+  font-family: inherit;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+
+button:active {
+  transform: translateY(0);
+}
+
+
+.wallet-button {
+  padding: 13px 20px;
+
+  border-radius: 10px;
+
+  background: white;
+  color: #0f172a;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.wallet-button.connected-button {
+  background: #dcfce7;
+  color: #166534;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+  width: min(900px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 75px 0;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  text-align: center;
+
+  margin-bottom: 45px;
+}
+
+
+.eyebrow {
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #334155;
+}
+
+
+.hero h2 {
+  margin: 15px 0;
+
+  font-size: clamp(34px, 6vw, 52px);
+
+  line-height: 1.08;
+}
+
+
+.hero-description {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: #64748b;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   CAMPAIGN CARD
+========================= */
+
+.campaign-card {
+  background: white;
+
+  padding: 34px;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.08);
+
+  border: 1px solid #e5e7eb;
+}
+
+
+.campaign-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+
+.campaign-label {
+  margin: 0 0 8px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  color: #475569;
+}
+
+
+.campaign-card h3 {
+  margin: 0;
+
+  font-size: 30px;
+
+  line-height: 1.2;
+}
+
+
+.campaign-status {
+  flex-shrink: 0;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  background: #dcfce7;
+  color: #166534;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+.description {
+  margin: 18px 0 0;
+
+  color: #64748b;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   FUNDING
+========================= */
+
+.funding-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+
+  margin: 32px 0;
+}
+
+
+.funding-item {
+  padding: 22px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 14px;
+
+  background: #fafafa;
+}
+
+
+.funding-item span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+.funding-item strong {
+  font-size: 27px;
+
+  font-weight: 800;
+
+  color: #0f172a;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-section {
+  margin-top: 10px;
+}
+
+
+.progress-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 10px;
+
+  font-size: 15px;
+}
+
+
+.progress-header strong {
+  font-size: 16px;
+}
+
+
+.progress-bar {
+  width: 100%;
+
+  height: 17px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #e2e8f0;
+}
+
+
+.progress {
+  width: 45%;
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #2563eb;
+
+  transition: width 0.5s ease;
+}
+
+
+.progress-section p {
+  margin: 9px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   WALLET INFO
+========================= */
+
+.wallet-info {
+  margin-top: 20px;
+
+  padding: 14px 16px;
+
+  border-radius: 12px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  font-size: 13px;
+
+  color: #475569;
+}
+
+
+.wallet-info span {
+  font-family: monospace;
+
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+
+/* =========================
+   ACTION AREA
+========================= */
+
+.action-area {
+  margin-top: 22px;
+}
+
+
+.contribute-button {
+  width: 100%;
+
+  padding: 15px 20px;
+
+  border-radius: 11px;
+
+  background: #0f172a;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+
+.contribute-button:hover {
+  background: #1e293b;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message-box {
+  margin-top: 16px;
+
+  padding: 14px 16px;
+
+  border-radius: 12px;
+
+  background: #eff6ff;
+
+  color: #1d4ed8;
+
+  border: 1px solid #bfdbfe;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 30px 20px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+footer p {
+  margin: 0 0 6px;
+
+  font-weight: 700;
+
+  color: #334155;
+}
+
+
+footer span {
+  font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+
+  .wallet-button {
+    width: 100%;
+  }
+
+
+  .campaign-top {
+    flex-direction: column;
+  }
+
+
+  .funding-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .campaign-card {
+    padding: 24px;
+  }
+
+
+  .campaign-card h3 {
+    font-size: 25px;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .container {
+    width: min(100% - 24px, 900px);
+
+    padding: 45px 0;
+  }
+
+
+  .hero h2 {
+    font-size: 34px;
+  }
+
+}
