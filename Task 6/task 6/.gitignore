@@ -1,0 +1,15 @@
+# Binaries
+bin/
+*.exe
+*.test
+*.out
+
+# Go module cache artifact that ended up in this workspace
+pkg/mod/
+
+# Go workspace files
+go.work
+go.work.sum
+
+# OS / editor noise
+.DS_Store
